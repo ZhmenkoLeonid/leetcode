@@ -6,8 +6,8 @@ public class Solution {
     public int removeDuplicates(int[] nums) {
         int uniqueElementsCnt = 0;
         int[] uniqueElements = new int[201];
-        for (int i = 0; i < nums.length; i++) {
-            uniqueElements[nums[i] + 100]++;
+        for (int num : nums) {
+            uniqueElements[num + 100]++;
         }
         for (int i = 0; i < uniqueElements.length; i++) {
             if (uniqueElements[i] > 0) {

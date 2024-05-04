@@ -6,8 +6,8 @@ public class Main {
     public int removeDuplicates(int[] nums) {
         int elementsCnt = 0;
         int[] uniqueElements = new int[20001];
-        for (int i = 0; i < nums.length; i++) {
-            uniqueElements[nums[i] + 10000]++;
+        for (int num : nums) {
+            uniqueElements[num + 10000]++;
         }
         for (int i = 0; i < uniqueElements.length; i++) {
                 for (int j = 0; j < Math.min(uniqueElements[i],2); j++) {

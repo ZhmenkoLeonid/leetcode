@@ -10,7 +10,7 @@ class Solution {
         return jump (nums, 0, visited);
     }
 
-    private boolean jump (int nums[], int pos, Set<Integer> visited) {
+    private boolean jump (int[] nums, int pos, Set<Integer> visited) {
         if (pos == nums.length - 1) return true;
         visited.add(pos);
         for (int i = 1, newPos = pos+1; newPos < nums.length && i <= nums[pos]; i++, newPos++) {
@@ -21,7 +21,6 @@ class Solution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{2,0,0};
-        int val = 2;
         boolean result = new Solution().canJump(nums);
         System.out.println(Arrays.toString(nums));
         System.out.println(result);
